@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Публичная оферта - Dress Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Применяем сохраненную тему
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.classList.add(savedTheme + '-theme');
+    </script>
+    <style>
+        .oferta-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        body.dark-theme .oferta-content {
+            background: rgba(45, 55, 72, 0.6);
+            color: white;
+        }
+        body.dark-theme .oferta-content h1 {
+            color: #667eea;
+        }
+        body.dark-theme .oferta-content h2 {
+            color: #e2e8f0;
+        }
+        body.dark-theme .oferta-content p {
+            color: #cbd5e0;
+        }
+        .oferta-content h1 {
+            color: #667eea;
+            margin-bottom: 2rem;
+        }
+        .oferta-content h2 {
+            color: #333;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .oferta-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 1.5rem 2rem;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Применяем тему к body после загрузки
+        document.body.classList.add((localStorage.getItem('theme') || 'dark') + '-theme');
+    </script>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Dress Market</div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="back-link">← Вернуться на главную</a>
+
+    <div class="oferta-content">
+        <h1>Публичная оферта</h1>
+        <p><strong>Дата публикации:</strong> 27 февраля 2026 года</p>
+
+        <h2>1. Общие положения</h2>
+        <p>Настоящая публичная оферта (далее - "Оферта") регулирует условия использования сайта Dress Market (далее - "Сайт").</p>
+        <p>Владелец: vkesi. Все права защищены.</p>
+
+        <h2>2. Предмет договора</h2>
+        <p>Сайт Dress Market является информационной площадкой для поддержки клиентов и обработки возвратов товаров, приобретенных через платформу Авито.</p>
+        <p>Все покупки осуществляются исключительно через платформу Авито.</p>
+        <p>Владелец сайта не несет ответственности за сделки, совершенные на платформе Авито.</p>
+
+        <h2>3. Назначение сайта</h2>
+        <p>Сайт предназначен для:</p>
+        <p>- Предоставления информации о товарах</p>
+        <p>- Поддержки клиентов, совершивших покупки через Авито</p>
+        <p>- Обработки запросов на возврат и обмен товаров</p>
+        <p>- Консультирования по вопросам использования товаров</p>
+
+        <h2>4. Цена товара и оплата</h2>
+        <p>Цены на товары указаны в российских рублях и носят информационный характер.</p>
+        <p>Актуальные цены и условия оплаты уточняются на платформе Авито.</p>
+        <p>Оплата производится согласно правилам и способам оплаты, предусмотренным платформой Авито.</p>
+
+        <h2>5. Доставка</h2>
+        <p>Условия доставки товаров определяются продавцом на платформе Авито.</p>
+        <p>Сроки и стоимость доставки согласовываются напрямую с продавцом через Авито.</p>
+        <p>Сайт Dress Market не участвует в организации доставки товаров.</p>
+
+        <h2>6. Возврат и обмен товара</h2>
+        <p>Сайт Dress Market предоставляет поддержку по вопросам возврата и обмена товаров, приобретенных через Авито.</p>
+        <p>Для оформления возврата обратитесь через форму обратной связи на сайте или напишите на email.</p>
+        <p>Возврат и обмен осуществляется в соответствии с правилами платформы Авито и законодательством РФ.</p>
+
+        <h2>7. Гарантии и ответственность</h2>
+        <p>Сайт Dress Market предоставляет информационную поддержку и помощь в решении вопросов по товарам.</p>
+        <p>Ответственность за качество товаров и условия сделки несет продавец на платформе Авито.</p>
+        <p>Сайт оказывает содействие в разрешении споров между покупателем и продавцом.</p>
+
+        <h2>8. Конфиденциальность</h2>
+        <p>Сайт Dress Market обязуется не разглашать персональные данные пользователей третьим лицам, за исключением случаев, предусмотренных законодательством.</p>
+        <p>Персональные данные используются исключительно для регистрации на сайте и улучшения качества сервиса.</p>
+        <p>При переходе на платформу Авито действуют правила конфиденциальности Авито.</p>
+
+        <h2>9. Заключительные положения</h2>
+        <p>Настоящая Оферта вступает в силу с момента размещения на сайте и действует до момента отзыва владельцем.</p>
+        <p>Владелец оставляет за собой право вносить изменения в условия Оферты в одностороннем порядке.</p>
+        <p>Все вопросы, не урегулированные настоящей Офертой, регулируются законодательством Российской Федерации.</p>
+        <p>Сайт является площадкой для поддержки клиентов и обработки возвратов товаров, приобретенных через Авито.</p>
+
+        <h2>10. Контактная информация</h2>
+        <p>По всем вопросам поддержки и возвратов обращайтесь:</p>
+        <p>Email: akfagia@gmail.com</p>
+        <p>Владелец: vkesi</p>
+        <p>Покупки осуществляются через платформу Авито</p>
+        <p>© 2026 Dress Market. Все права защищены.</p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p><a href="index.html" style="color: #667eea; text-decoration: underline;">Главная</a></p>
+                <p>Email: <a href="mailto:akfagia@gmail.com" style="color: #667eea; text-decoration: underline;">akfagia@gmail.com</a></p>
+                <p>© 2026 Dress Market. Владелец: vkesi. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
