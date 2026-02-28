@@ -71,6 +71,29 @@ function updateThemeIcon(theme) {
     }
 }
 
+function showSuccessMessage(message) {
+    const existingMessage = document.querySelector('.success-notification');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    const notification = document.createElement('div');
+    notification.className = 'success-notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+    
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 3000);
+}
+
 function initAuth() {
     const authBtn = document.getElementById('authBtn');
     const authModal = document.getElementById('authModal');
@@ -150,12 +173,12 @@ function initAuth() {
                 await createUserWithEmailAndPassword(auth, email, password);
                 authModal.style.display = 'none';
                 authForm.reset();
-                alert('✅ Регистрация успешна!');
+                showSuccessMessage('✅ Регистрация успешна!');
             } else {
                 await signInWithEmailAndPassword(auth, email, password);
                 authModal.style.display = 'none';
                 authForm.reset();
-                alert('✅ Вход выполнен!');
+                showSuccessMessage('✅ Вход выполнен!');
             }
         } catch (error) {
             let errorMessage = 'Произошла ошибка';
@@ -195,7 +218,7 @@ function initAuth() {
             try {
                 await signInWithPopup(auth, googleProvider);
                 authModal.style.display = 'none';
-                alert('✅ Вход через Google выполнен!');
+                showSuccessMessage('✅ Вход через Google выполнен!');
             } catch (error) {
                 authError.textContent = 'Ошибка входа через Google';
             }
@@ -217,7 +240,7 @@ function initAuth() {
             try {
                 await signInWithPopup(auth, microsoftProvider);
                 authModal.style.display = 'none';
-                alert('✅ Вход через Microsoft выполнен!');
+                showSuccessMessage('✅ Вход через Microsoft выполнен!');
             } catch (error) {
                 authError.textContent = 'Ошибка входа через Microsoft';
             }
@@ -287,7 +310,7 @@ function initAuth() {
                 authModal.style.display = 'none';
                 const phoneAuthSection = document.getElementById('phoneAuthSection');
                 if (phoneAuthSection) phoneAuthSection.style.display = 'none';
-                alert('✅ Вход по телефону выполнен!');
+                showSuccessMessage('✅ Вход по телефону выполнен!');
             } catch (error) {
                 authError.textContent = 'Неверный код';
             }
@@ -300,7 +323,7 @@ function initAuth() {
             await signOut(auth);
         }
         profileModal.style.display = 'none';
-        alert('Вы вышли из аккаунта');
+        showSuccessMessage('Вы вышли из аккаунта');
     });
 
     // Отслеживание состояния авторизации
