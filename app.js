@@ -15,12 +15,12 @@ import {
 
 // Firebase конфигурация
 const firebaseConfig = {
-    apiKey: "AIzaSyCo7fdpg39a4a4yl3sG6e30jAGxIrA7M8",
+    apiKey: "AIzaSyCod7fdpg39a6a4yl35d5e30jAGXrrA7R8",
     authDomain: "vkseishop.firebaseapp.com",
     projectId: "vkseishop",
     storageBucket: "vkseishop.firebasestorage.app",
     messagingSenderId: "920882217983",
-    appId: "1:920882217983:web:c78ad6ccc325dd6a899dca"
+    appId: "1:920882217983:web:c78ada6cc325dd6a099dca"
 };
 
 // Проверка конфигурации
