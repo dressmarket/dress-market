@@ -280,19 +280,26 @@ function initAuth() {
             authError.textContent = '';
             const phoneNumber = document.getElementById('phoneNumber').value.trim();
             
+            console.log('Попытка отправки кода на:', phoneNumber);
+            
             if (!phoneNumber.startsWith('+')) {
                 authError.textContent = 'Номер должен начинаться с + (например: +79991234567)';
                 return;
             }
             
             try {
+                console.log('Отправка SMS...');
                 confirmationResult = await signInWithPhoneNumber(auth, phoneNumber, recaptchaVerifier);
-                document.getElementById('codeSection').style.display = 'block';
+                console.log('SMS отправлен успешно!');
+                
+                const codeSection = document.getElementById('codeSection');
+                codeSection.style.display = 'block';
                 sendCodeBtn.disabled = true;
-                authError.textContent = '';
                 authError.style.color = '#4caf50';
                 authError.textContent = '✅ Код отправлен на телефон!';
             } catch (error) {
+                console.error('Ошибка отправки SMS:', error);
+                authError.style.color = '#e53e3e';
                 authError.textContent = 'Ошибка отправки кода: ' + error.message;
             }
         });
